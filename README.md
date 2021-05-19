@@ -39,3 +39,9 @@ method to report state (success / fail)
 - Name: For Easier Debugging
 
 **BehaviourTree**: Tree Root
+
+## Printing Nodes
+
+Only for debugging
+
+Two Techniques: **Recursion** | Stack

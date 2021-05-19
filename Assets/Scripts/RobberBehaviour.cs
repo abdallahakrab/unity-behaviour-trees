@@ -16,8 +16,16 @@ public class RobberBehaviour : MonoBehaviour
         steal.AddChild(goToDiamond);
         steal.AddChild(goToVan);
         tree.AddChild(steal);
-        tree.PrintTree();
 
+        // Node eat = new Node("Eat Something");
+        // Node bread = new Node("Bread");
+        // Node meat = new Node("Meat");
+
+        // eat.AddChild(bread);
+        // eat.AddChild(meat);
+        // tree.AddChild(eat);
+
+        tree.PrintTree();
     }
 
     void Update()

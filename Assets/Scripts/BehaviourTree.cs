@@ -16,24 +16,28 @@ public class BehaviourTree : Node
 
     public void PrintTree()
     {
-        Print(this);
+        string s = "";
+        int i = 0;
+        Print(this, ref s, i);
+        Debug.Log(s);
     }
 
-    private void Print(Node node)
+    private void Print(Node node, ref string printText, int level)
     {
         if (node == null)
         {
             return;
 
         }
-        Debug.Log(node.name);
+        printText += new string('\t', level) + node.name + "\n";
         if (node.children.Count == 0)
         {
             return;
         }
+        level++;
         foreach (Node child in node.children)
         {
-            Print(child);
+            Print(child, ref printText, level);
         }
 
     }
